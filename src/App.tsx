@@ -12,11 +12,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://liff.line.me/2006560139-1oXrybyP"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Open Liff
         </a>
       </header>
     </div>
