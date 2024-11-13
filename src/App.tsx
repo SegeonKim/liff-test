@@ -12,7 +12,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://liff.line.me/2006560139-1oXrybyP"
+          href="https://google.com"
           target="_blank"
           rel="noopener noreferrer"
         >
