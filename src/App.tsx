@@ -2,18 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {liff} from "@line/liff";
+import {useParams} from "react-router-dom";
 
 function App() {
-  const initLiff = async () => {
-    await liff.init({
-      liffId: "2005519827-V87KPNaP",
-    });
-    await liff.login();
-  }
+  const params = useParams();
+  const liffId = params.liffId as string;
 
   const openLiff = async (url: string) => {
     await liff.init({
-      liffId: "2005519827-V87KPNaP",
+      liffId: liffId,
     });
     await liff.subWindow.open({url: url});
   };
@@ -25,11 +22,6 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <button className="open-button" onClick={() => {
-          initLiff()
-        }}>
-          Liff Init
-        </button>
         <br/>
         <button className="open-button" onClick={() => {
           openLiff("https://liff.line.me/2005519827-Kpj8doYd")
@@ -54,7 +46,7 @@ function App() {
         <br/>
         <a
             className="App-link"
-            href="https://kaleidoscopic-mermaid-dbb2f7.netlify.app"
+            href={`https://kaleidoscopic-mermaid-dbb2f7.netlify.app?liffId=${liffId}`}
             target="_blank"
             rel="noopener noreferrer"
         >
