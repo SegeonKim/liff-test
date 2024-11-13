@@ -45,6 +45,15 @@ function App() {
         <br/>
         <a
             className="App-link"
+            href="https://liff.line.me/2005519827-pArMwjaw"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          Open Liff - no lib
+        </a>
+        <br/>
+        <a
+            className="App-link"
             href="https://kaleidoscopic-mermaid-dbb2f7.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
