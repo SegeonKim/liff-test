@@ -24,8 +24,11 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <br/>
-        <button className="open-button" onClick={() => {
-          openLiff("https://liff.line.me/2005519827-Kpj8doYd")
+        <button className="open-button" onClick={async () => {
+          await openLiff("https://liff.line.me/2005519827-Kpj8doYd");
+          setTimeout(() => {
+            openLiff("https://liff.line.me/2005519827-pArMwjaw");
+          }, 5000);
         }}>
           Open Liff - Tall
         </button>
