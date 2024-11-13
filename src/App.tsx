@@ -4,10 +4,13 @@ import './App.css';
 import {liff} from "@line/liff";
 
 function App() {
-  liff.init({
-    liffId: "2005519827-V87KPNaP",
-  });
-  liff.login();
+  const initLiff = () => {
+    liff.init({
+      liffId: "2005519827-V87KPNaP",
+    });
+    liff.login();
+  }
+
   const openLiff = async (url: string) => {
     await liff.subWindow.open({url: url});
   };
@@ -19,6 +22,11 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <button className="open-button" onClick={() => {
+          initLiff()
+        }}>
+          Liff Init
+        </button>
         <button className="open-button" onClick={() => {
           openLiff("https://liff.line.me/2005519827-Kpj8doYd")
         }}>
