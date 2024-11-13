@@ -1,8 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {liff} from "@line/liff";
 
 function App() {
+  const openLiff = async (url: string) => {
+    await liff.subWindow.open({url: url});
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,14 +15,10 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-            className="App-link"
-            href="https://liff.line.me/2005519827-Kpj8doYd"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <button className="open-button" onClick={() => {openLiff("https://liff.line.me/2005519827-Kpj8doYd")}}>
           Open Liff
-        </a>
+        </button>
+        <br/>
         <a
             className="App-link"
             href="https://kaleidoscopic-mermaid-dbb2f7.netlify.app"
