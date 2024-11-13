@@ -4,14 +4,17 @@ import './App.css';
 import {liff} from "@line/liff";
 
 function App() {
-  const initLiff = () => {
-    liff.init({
+  const initLiff = async () => {
+    await liff.init({
       liffId: "2005519827-V87KPNaP",
     });
-    liff.login();
+    await liff.login();
   }
 
   const openLiff = async (url: string) => {
+    await liff.init({
+      liffId: "2005519827-V87KPNaP",
+    });
     await liff.subWindow.open({url: url});
   };
 
@@ -27,6 +30,7 @@ function App() {
         }}>
           Liff Init
         </button>
+        <br/>
         <button className="open-button" onClick={() => {
           openLiff("https://liff.line.me/2005519827-Kpj8doYd")
         }}>
