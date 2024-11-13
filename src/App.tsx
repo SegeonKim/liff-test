@@ -15,8 +15,15 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <button className="open-button" onClick={() => {openLiff("https://liff.line.me/2005519827-Kpj8doYd")}}>
-          Open Liff
+        <button className="open-button" onClick={() => {
+          openLiff("https://liff.line.me/2005519827-Kpj8doYd")
+        }}>
+          Open Liff - Tall
+        </button>
+        <button className="open-button" onClick={() => {
+          openLiff("https://liff.line.me/2005519827-pArMwjaw")
+        }}>
+          Open Liff - Compact
         </button>
         <br/>
         <a
