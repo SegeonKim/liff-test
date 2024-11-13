@@ -2,13 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {liff} from "@line/liff";
-import {useParams} from "react-router-dom";
 
 function App() {
-  const params = useParams();
-  const liffId = params.liffId as string;
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const liffId = urlParams.get('liffId') as string;
 
   const openLiff = async (url: string) => {
+    console.log(liffId)
     await liff.init({
       liffId: liffId,
     });
