@@ -41,6 +41,10 @@ function App() {
     window.open(session.url, '_blank');
   }
 
+  const redirectInLiff = (url: string) => {
+    window.location.href = url;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -65,6 +69,12 @@ function App() {
           await createStripeCheckout();
         }}>
           Stripe Checkout
+        </button>
+        <br/>
+        <button className="open-button" onClick={() => {
+          redirectInLiff("https://www.naver.com");
+        }}>
+          Redirect in Liff
         </button>
         <br/>
         <a
