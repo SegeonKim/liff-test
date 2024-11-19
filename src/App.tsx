@@ -87,7 +87,7 @@ function App() {
         <br/>
         <a
             className="App-link"
-            href={`https://uit-bluefruit.line-apps-beta.com/ko-KR/1st_sale/sales/82650/`}
+            href={`https://test-m.pay.naver.com/z/payments/20241119WGZXMHNPZ1NlT3dnVDAzb2k1dDNDZzlOaDg4PQ==`}
             target="_blank"
             rel="noopener noreferrer"
         >
