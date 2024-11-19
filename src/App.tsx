@@ -56,6 +56,15 @@ function App() {
         >
           Open IAB
         </a>
+        <br/>
+        <a
+            className="App-link"
+            href={`https://checkout.stripe.com/c/pay/cs_test_a1UvHAgSAs2hJzs5oE0IZeKWSewpIWIUI8xefLWBWTfOuKSxqqoorRyz5K#fidkdWxOYHwnPyd1blpxYHZxWjA0SkZyc19OYHJpcENjTURWVHNuZ3M2V0txYGdIdnRTdWRfUmAzY0hJaUxWanRzd2tNcUhfX1U0N3BWaUpPNW9sNmxnSGRtbTNWaHJUU2FWd3ZudFw9QVFyNTVMPXxQS3JgdScpJ2N3amhWYHdzYHcnP3F3cGApJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl`}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+          Open STRIPE
+        </a>
       </header>
     </div>
   );
