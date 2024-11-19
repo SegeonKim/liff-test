@@ -59,6 +59,12 @@ function App() {
         </p>
         <br/>
         <button className="open-button" onClick={async () => {
+          await openLiff("https://liff.line.me/2005519827-V87KPNaP");
+        }}>
+          Open Liff - Full
+        </button>
+        <br/>
+        <button className="open-button" onClick={async () => {
           await openLiff("https://liff.line.me/2005519827-Kpj8doYd");
         }}>
           Open Liff - Tall
