@@ -88,6 +88,12 @@ function App() {
           Stripe Checkout - one page
         </button>
         <br/>
+        <button className="open-button" onClick={async () => {
+          window.location.href = "https://liff.line.me/2005519827-V87KPNaP";
+        }}>
+          Open Liff - one page
+        </button>
+        <br/>
         <button className="open-button" onClick={() => {
           redirectInLiff("https://www.naver.com");
         }}>
