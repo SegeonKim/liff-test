@@ -89,9 +89,9 @@ function App() {
         </button>
         <br/>
         <button className="open-button" onClick={async () => {
-          window.location.href = "https://liff.line.me/2005519827-V87KPNaP";
+          window.location.href = "https://kaleidoscopic-mermaid-dbb2f7.netlify.app?liffId=2005519827-V87KPNaP";
         }}>
-          Open Liff - one page
+          Open Page - one page
         </button>
         <br/>
         <button className="open-button" onClick={() => {
