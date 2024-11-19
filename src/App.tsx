@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {liff} from "@line/liff";
@@ -7,7 +7,6 @@ function App() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const liffId = urlParams.get('liffId') as string;
-  const [stripePaymentUrl, setStripePaymentUrl] = useState("");
 
   const openLiff = async (url: string) => {
     console.log(liffId)
@@ -38,7 +37,6 @@ function App() {
 
     const session = await response.json();
     console.log(session);
-    setStripePaymentUrl(session.url)
 
     window.open(session.url, '_blank');
   }
