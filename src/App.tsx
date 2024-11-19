@@ -16,7 +16,7 @@ function App() {
     await liff.subWindow.open({url: url});
   };
 
-  const createStripeCheckout = async () => {
+  const createStripeCheckout = async (popup: boolean) => {
     const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
       headers: {
@@ -38,11 +38,12 @@ function App() {
     const session = await response.json();
     console.log(session);
 
-    window.open(session.url, '_blank');
-  }
+    if (popup) {
+      window.open(session.url, '_blank');
+    } else {
+      window.location.href = session.url;
+    }
 
-  const redirectInLiff = (url: string) => {
-    window.location.href = url;
   }
 
   return (
@@ -66,15 +67,15 @@ function App() {
         </button>
         <br/>
         <button className="open-button" onClick={async () => {
-          await createStripeCheckout();
+          await createStripeCheckout(true);
         }}>
           Stripe Checkout
         </button>
         <br/>
-        <button className="open-button" onClick={() => {
-          redirectInLiff("https://www.naver.com");
+        <button className="open-button" onClick={async () => {
+          await createStripeCheckout(false);
         }}>
-          Redirect in Liff
+          Stripe Checkout - one page
         </button>
         <br/>
         <a
