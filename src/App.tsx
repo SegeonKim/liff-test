@@ -89,7 +89,7 @@ function App() {
         </button>
         <br/>
         <button className="open-button" onClick={async () => {
-          window.location.href = "https://kaleidoscopic-mermaid-dbb2f7.netlify.app?liffId=2005519827-V87KPNaP";
+          window.location.href = "https://wallet-dapp-portal.line-apps-beta.com?liffId=2005519827-Kpj8doYd";
         }}>
           Open Page - one page
         </button>
