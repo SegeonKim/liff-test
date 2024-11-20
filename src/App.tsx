@@ -16,7 +16,7 @@ function App() {
     await liff.subWindow.open({url: url});
   };
 
-  const createStripeCheckout = async (popup: boolean) => {
+  const createStripeCheckout = async () => {
     const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
       headers: {
@@ -38,11 +38,8 @@ function App() {
     const session = await response.json();
     console.log(session);
 
-    if (popup) {
-      window.open(session.url, '_blank');
-    } else {
-      window.location.href = session.url;
-    }
+    const path = session.url.replace("https://checkout.stripe.com", "");
+    await openLiff(`https://liff.line.me/2005519827-pArMwjaw${path}`);
 
   }
 
@@ -77,15 +74,9 @@ function App() {
         </button>
         <br/>
         <button className="open-button" onClick={async () => {
-          await createStripeCheckout(true);
+          await createStripeCheckout();
         }}>
-          Stripe Checkout
-        </button>
-        <br/>
-        <button className="open-button" onClick={async () => {
-          await createStripeCheckout(false);
-        }}>
-          Stripe Checkout - one page
+          Stripe Checkout - Liff
         </button>
         <br/>
         <button className="open-button" onClick={async () => {
