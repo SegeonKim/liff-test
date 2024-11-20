@@ -39,6 +39,7 @@ function App() {
     console.log(session);
 
     const path = session.url.replace("https://checkout.stripe.com", "");
+    alert(`https://liff.line.me/2005519827-pArMwjaw${path}`);
     await openLiff(`https://liff.line.me/2005519827-pArMwjaw${path}`);
 
   }
