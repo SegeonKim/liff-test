@@ -7,6 +7,7 @@ function App() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const liffId = urlParams.get('liffId') as string;
+  alert(window.location.href);
 
   const openLiff = async (url: string) => {
     console.log(liffId)
